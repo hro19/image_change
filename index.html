@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<img id="aaa" src="img/br.png">
+	<!-- /#aaa -->
+
+	<ul>
+		<li><a class="adobeBtn" href="javascript:void(0)" data-fig="img/ai.png">ai</a></li>
+		<li><a class="adobeBtn" href="javascript:void(0)" data-fig="img/br.png">br</a></li>
+		<li><a class="adobeBtn" href="javascript:void(0)" data-fig="img/dr.png">dr</a></li>
+		<li><a class="adobeBtn" href="javascript:void(0)" data-fig="img/ps.png">ps</a></li>
+	</ul>
+
+	<script>
+		var botai = document.getElementById("aaa");
+		//console.log(botai);
+		var adobeBtns = document.querySelectorAll(".adobeBtn");
+		console.log(adobeBtns);
+
+		const myEvent = function (event) {
+			var dataFig = event.target.dataset.fig;
+			//alert(dataFig);
+			botai.src = dataFig;
+		}
+
+		adobeBtns.forEach(function (adobeBtn) {
+			adobeBtn.addEventListener('click', myEvent, false);
+		})
+
+
+	</script>
+</body>
+
+</html>
